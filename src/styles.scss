@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import './app/styles/mixins.scss';
+
 @import "~bootstrap/scss/bootstrap-grid";
 
 @font-face {
@@ -26,4 +28,54 @@ h1,h2,h3,h4,h5,h6 {
 }
 img {
     width: 100%;
+}
+button {
+    cursor: pointer;
+}
+
+@include phone {
+    .c-characters-gallery-card, .c-locations-gallery-card, .c-episodes-gallery-card {
+        max-width: 75%;
+    }
+    .row {
+        margin: 0;
+    }
+    .c-characters-gallery, .c-locations-gallery, .c-episodes-gallery {
+        background-attachment: fixed !important;
+    }
+}
+    
+
+@include tablet {
+    .hero-image {
+        max-height: 20vh;
+        padding: 0.5rem;
+    }
+    .c-characters-gallery-card, .c-locations-gallery-card, .c-episodes-gallery-card {
+        margin: 1rem 1rem !important;
+    }  
+}
+@include desktop {
+    .hero-image {
+        & img {
+            width: 20% !important;
+            max-height: 13vh;
+        }
+    }
+    nav {
+        justify-content: space-evenly !important;
+        padding: 0.5rem 10rem !important;
+    }
+    .home-container {
+        min-height: 45vh !important;
+        padding: 1rem !important;
+    }
+    .home-image-container {
+        & img {
+            height: 40vh !important;
+        }
+    }
+    .c-characters-gallery h2, .c-locations-gallery h2, .c-episodes-gallery h2 {
+        font-size: 2.5rem;
+    }
 }

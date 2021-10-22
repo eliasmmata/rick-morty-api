@@ -6,24 +6,30 @@ footer {
     & a {
         color: #02AEC9;
         padding: 0 2rem;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        text-align: center;
+        align-items: center;
     }
     & #icon-about:after {
         content: '';
-        background-image:  url('../../../assets/images/icons/ricky-icon-footer.png');
+        background-image:  url('../../../assets/images/icons/rick-folder-icon-5.png');
         min-height: 49px;
         background-position: center top;
         background-size: 45px 45px;
         background-repeat: no-repeat;
-        /* display: block; */
+        display: block;
+        margin-right: -25px;
     }
     & #icon-me:after {
         content: '';
-        background-image:  url('../../../assets/images/icons/ricky-icon-footer.png');
+        background-image:  url('../../../assets/images/icons/alterego-about.png');
         min-height: 49px;
         background-position: center top;
         background-size: 45px 45px;
         background-repeat: no-repeat;
         display: flex;
+        margin-right: -25px;
     }
 }
 .about {

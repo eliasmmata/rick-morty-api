@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class EpisodesComponent implements OnInit {
 
   episodesList:any = [];
-  info:any = {};
+  info:any = {}
 
   constructor(private episodesService:EpisodesService) { }
 
@@ -25,9 +25,9 @@ export class EpisodesComponent implements OnInit {
     console.log('pagina siguiente')
     if(this.info.next) {
         this.episodesService.getLocationByPages(this.info.next).subscribe((episode) => {
-        this.episodesService= episode.results
+        this.episodesList= episode.results
         this.info = episode.info
-        // console.log(location.info)
+        console.log(episode.info)
       })
     }
   }
@@ -37,7 +37,7 @@ export class EpisodesComponent implements OnInit {
         this.episodesService.getLocationByPages(this.info.prev).subscribe((episode) => {
         this.episodesService= episode.results
         this.info = episode.info
-        // console.log(location.info)
+        console.log(episode.info)
       })
     }
   }

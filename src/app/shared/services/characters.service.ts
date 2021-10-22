@@ -15,6 +15,10 @@ export class CharactersService {
   getCharacterById(id:any):Observable<any> {
     return this.http.get('https://rickandmortyapi.com/api/character/' + id)
   }
+  getLocationByPages(url:any):Observable<any> {
+    // console.log(url)
+    return this.http.get(url)
+  }
 }
 
 

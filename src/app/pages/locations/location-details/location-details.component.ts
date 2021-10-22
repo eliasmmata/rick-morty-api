@@ -10,14 +10,22 @@ import { ActivatedRoute } from '@angular/router';
 export class LocationDetailsComponent implements OnInit {
 
   public locationDetail:any = {}
+  residentsLocation:any= []
 
   constructor(private route:ActivatedRoute, private locationsService:LocationsService) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      let idLocation = Number(params.get('id'))
-      this.locationsService.getLocationById(idLocation).subscribe((location) => {
+        let idLocation = Number(params.get('id'))
+        this.locationsService.getLocationById(idLocation).subscribe((location) => {
         this.locationDetail = location;
+
+          for(let i = 0; i < location.residents.length; i++) {
+            const urlResident = location.residents[i];
+            this.locationsService.getCharacterByUrl(urlResident).subscribe((resident) => {
+            this.residentsLocation.push(resident)
+          })
+        }
       })
     })
   }

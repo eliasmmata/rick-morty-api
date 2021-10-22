@@ -15,4 +15,8 @@ export class EpisodesService {
   getEpisodeById(id:any):Observable<any> {
     return this.http.get('https://rickandmortyapi.com/api/episode/' + id)
   }
+  getLocationByPages(url:any):Observable<any> {
+    // console.log(url)
+    return this.http.get(url)
+  }
 }

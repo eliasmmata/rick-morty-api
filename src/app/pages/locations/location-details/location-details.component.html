@@ -5,10 +5,14 @@
         <h3>{{locationDetail.name | uppercase }}</h3>
         <p>Type : <span>{{locationDetail.type}}</span></p>
         <p>Dimension : <span>{{locationDetail.dimension}}</span></p>
-        <!-- <p>{{locationDetail.url}}</p> -->
-        <!-- <ul *ngFor='let residents of locationDetail.residents'>
-            <li>{{residents}}</li>
-        </ul>
-    </div> -->
+        <h4>Usually around</h4>
+        <div class="c-location-residents-scroll" >
+            <div *ngFor="let res of residentsLocation">
+                <h5>{{res.name}}</h5>
+                <img src="{{res.image}}">
+            </div>
+        </div>
+    </div>
 </div>
+
 

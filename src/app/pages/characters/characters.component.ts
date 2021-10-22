@@ -1,3 +1,4 @@
+import { CharactersModule } from './characters.module';
 import { Component, OnInit } from '@angular/core';
 import { CharactersService } from 'src/app/shared/services/characters.service';
 
@@ -18,6 +19,26 @@ export class CharactersComponent implements OnInit {
       this.charactersList = character.results;
       this.info = character.info;
     })
+  }
+  public nextPage() {
+    console.log('pagina siguiente')
+    if(this.info.next) {
+        this.charactersService.getLocationByPages(this.info.next).subscribe((character) => {
+        this.charactersList= character.results
+        this.info = character.info
+        // console.log(location.info)
+      })
+    }
+  }
+  public previousPage() {
+    console.log('pagina anterior')
+    if(this.info.prev) {
+        this.charactersService.getLocationByPages(this.info.prev).subscribe((character) => {
+        this.charactersList= character.results
+        this.info = character.info
+        // console.log(location.info)
+      })
+    }
   }
 
 }

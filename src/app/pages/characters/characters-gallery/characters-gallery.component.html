@@ -1,6 +1,6 @@
 <div class="c-characters-gallery">
     <h2>Characters List</h2>
-    <div *ngFor='let character of charactersList' [routerLink]="['/characters', character.id]" [ngStyle]="{'margin':'1rem 1rem 0 1rem','padding':'1em'}">
+    <div *ngFor='let character of charactersList' [routerLink]="['/characters', character.id]" [ngStyle]="{'margin':'1rem 3rem','padding':'1em'}">
         <h3>{{character.name | uppercase }}</h3>
         <img src="{{character.image}}">
         <h5>¿Curious?</h5>

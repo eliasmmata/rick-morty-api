@@ -15,4 +15,12 @@ export class LocationsService {
   getLocationById(id:any):Observable<any> {
     return this.http.get('https://rickandmortyapi.com/api/location/' + id)
   }
+  getCharacterByUrl(url:any):Observable<any> {
+    // console.log(url)
+    return this.http.get(url)
+  }
+  getLocationByPages(url:any):Observable<any> {
+    // console.log(url)
+    return this.http.get(url)
+  }
 }

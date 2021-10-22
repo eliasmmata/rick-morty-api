@@ -21,4 +21,25 @@ export class LocationsComponent implements OnInit {
     })
   }
 
+  public nextPage() {
+    console.log('pagina siguiente')
+    if(this.info.next) {
+        this.locationsService.getLocationByPages(this.info.next).subscribe((location) => {
+        this.locationsList= location.results
+        this.info = location.info
+        // console.log(location.info)
+      })
+    }
+  }
+  public previousPage() {
+    console.log('pagina anterior')
+    if(this.info.prev) {
+        this.locationsService.getLocationByPages(this.info.prev).subscribe((location) => {
+        this.locationsList= location.results
+        this.info = location.info
+        // console.log(location.info)
+      })
+    }
+  }
+
 }

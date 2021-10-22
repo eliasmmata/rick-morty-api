@@ -1,6 +1,6 @@
 <div class="c-locations-gallery">
     <h2>Locations List</h2>
-    <div *ngFor='let location of locationsList' [routerLink]="['/locations', location.id]" [ngStyle]="{'border': '1px solid #000','margin':'1rem','padding':'1em'}">
+    <div *ngFor='let location of locationsList' [routerLink]="['/locations', location.id]" [ngStyle]="{'border': '1px solid #000','margin':'1rem 2rem','padding':'1em'}">
         <h3>{{location.name | uppercase }}</h3>
         <h5>I am a <span>{{location.type}}</span></h5>
         <h5>Location: <span>{{location.dimension}}</span></h5>

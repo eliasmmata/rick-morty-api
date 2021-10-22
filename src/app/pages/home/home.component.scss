@@ -1,0 +1,22 @@
+.home-container {
+    min-height: 74vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & h1 {
+        padding: 1rem 0;
+        & span {
+            display: block;
+        }
+    }
+    
+}
+.home-image-container {
+    display: flex;
+    justify-content: center;
+    & img {
+        height: 48vh;
+        width: initial;
+    }
+}

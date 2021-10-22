@@ -1,0 +1,31 @@
+.c-about-container{
+    min-height: 72vh;
+    background-image: url(../../../assets/images/rick-bg.jpeg);
+    background-size: cover;
+    & h2 {
+        margin: 0;
+        padding: 2rem 0 1rem 0;
+        color: #4CAA09;
+    }
+    & h3 {
+        color: #7cb950;
+        padding: 0 3rem;
+        text-align: left;
+        line-height: 1.75rem;
+    }
+    & h4 {
+        text-align: left;
+        padding: 0rem 3rem 1rem 3rem;
+        margin: 1.5rem 0;
+        color: #8fc966;
+        & span {
+            display: block;
+            margin-top: 2rem;
+        }
+    }
+    & h5 {
+        color: #4CAA09;
+        text-align: right;
+        padding-right: 5rem;
+    }
+}

@@ -1,0 +1,35 @@
+.hero-image {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    border: 10px solid #02AEC9;
+    border-bottom: none;
+    & img {
+        width: 60%;
+        padding: 0.25rem 0;
+    }
+}
+nav {
+    padding: 1rem;
+    background: #02AEC9;
+    display: flex;
+    justify-content: space-evenly;
+    & a {
+        color: black;
+        text-shadow: 1px 1px 1px rgb(190, 189, 189);
+    }
+}
+
+.about {
+    & .hero-image {
+        border: 10px solid #4CAA09;
+        border-bottom: none;
+    }
+    & img {
+        filter: invert(52%) sepia(52%) saturate(2823%) hue-rotate(60deg) brightness(97%) contrast(93%);
+    }
+    & nav {
+        background: #4CAA09;
+    }
+
+}

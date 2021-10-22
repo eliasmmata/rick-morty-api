@@ -1,0 +1,13 @@
+<h2>Ahora estás en:</h2>
+<div [ngStyle]="{'margin': '1rem'}">
+    <div [ngStyle]="{'border': '1px solid #97ce4c','padding':'1rem'}">
+        <h5 [routerLink]="['/locations']" [ngStyle]="{'text-align': 'right'}">Volver a Localizaciones</h5>
+        <h3>{{locationDetail.name | uppercase }}</h3>
+        <p>{{locationDetail.type}}</p>
+        <p>{{locationDetail.dimension}}</p>
+        <!-- <p>{{locationDetail.url}}</p> -->
+        <ul *ngFor='let residents of locationDetail.residents'>
+            <li>{{residents}}</li>
+        </ul>
+    </div>
+</div>

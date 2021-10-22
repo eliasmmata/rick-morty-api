@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'rick';
+    src: url('./assets/fonts/get_schwifty.ttf');
+    font-family: 'future';
+    src: url('./assets/fonts/Prototype.ttf');
+}
+body {
+    margin: 0;
+    font-family: 'future', sans-serif;
+    box-sizing: border-box;
+}
+ul {
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 0 0.25rem;
+}
+h1,h2,h3,h4,h5,h6 {
+    text-align: center;
+    margin:0.5rem;
+}
+img {
+    width: 100%;
+}

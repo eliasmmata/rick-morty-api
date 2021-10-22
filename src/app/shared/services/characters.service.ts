@@ -12,9 +12,9 @@ export class CharactersService {
   getCharacters():Observable<any> {
     return this.http.get('https://rickandmortyapi.com/api/character')
   }
-  /* EJEMPLO CAMBIAR POR CHARACTER getLocationById(id:any):Observable<any> {
-  return this.http.get('https://rickandmortyapi.com/api/location/' + id)
-} */
+  getCharacterById(id:any):Observable<any> {
+    return this.http.get('https://rickandmortyapi.com/api/character/' + id)
+  }
 }
 
 

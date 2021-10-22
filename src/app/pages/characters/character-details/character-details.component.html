@@ -1,1 +1,11 @@
-<p>character-details works!</p>
+<div class="c-character-detail">
+    <h2>Tu personaje:</h2>
+    <div>
+        <button [routerLink]="['/characters']" [ngStyle]="{'text-align': 'right'}">Volver a Personajes</button>
+        <h3>{{characterDetail.name | uppercase }}</h3>
+        <img src="{{characterDetail.image}}" alt="{{characterDetail.name}}">
+        <p>I am From : {{characterDetail.origin.name}}</p>
+        <p>Specie : {{characterDetail.species}}</p>
+        <p>I am : {{characterDetail.status}}</p>
+    </div>
+</div>

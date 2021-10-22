@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CharactersService } from 'src/app/shared/services/characters.service';
 
 @Component({
   selector: 'app-character-details',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterDetailsComponent implements OnInit {
 
-  constructor() { }
+  public characterDetail: any = {};
+
+  constructor(private route:ActivatedRoute, private charactersService:CharactersService) { }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      let idCharacter = Number(params.get('id'))
+      this.charactersService.getCharacterById(idCharacter).subscribe((character) => {
+        this.characterDetail = character;
+        this.characterDetail.origin.name = character.origin.name;
+      })
+    })
   }
 
 }

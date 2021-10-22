@@ -1,1 +1,9 @@
-<p>episode-details works!</p>
+<div class="c-episode-detail">
+    <h2>Selected Episode</h2>
+    <div>
+        <button [routerLink]="['/episodes']" [ngStyle]="{'text-align': 'right'}">Go Back</button>
+        <h3>{{episodeDetail.name | uppercase }}</h3>
+        <p>Released : <span>{{episodeDetail.air_date}}</span></p>
+        <p>Episode : <span>{{episodeDetail.episode}}</span></p>
+    </div>
+</div>

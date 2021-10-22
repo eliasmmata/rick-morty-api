@@ -1,8 +1,10 @@
 <div class="c-episodes-gallery">
-    <h2>Episodios</h2>
+    <h2>Episodes List</h2>
     <div *ngFor='let episode of episodesList' [routerLink]="['/episodes', episode.id]" [ngStyle]="{'border': '1px solid #02AEC9','margin':'1rem','padding':'1em'}">
         <h3>{{episode.name | uppercase }}</h3>
         <h5>Emitido: <span>{{episode.air_date}}</span></h5>
         <h5>Nº ( {{episode.episode}} )</h5>
+        <button>More Data</button>
     </div>
 </div>
+

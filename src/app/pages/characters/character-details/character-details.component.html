@@ -1,11 +1,13 @@
 <div class="c-character-detail">
-    <h2>Tu personaje:</h2>
+    <h2>Selected Episode</h2>
     <div>
-        <button [routerLink]="['/characters']" [ngStyle]="{'text-align': 'right'}">Volver a Personajes</button>
+        <button [routerLink]="['/characters']" [ngStyle]="{'text-align': 'right'}">Go Back</button>
         <h3>{{characterDetail.name | uppercase }}</h3>
         <img src="{{characterDetail.image}}" alt="{{characterDetail.name}}">
-        <p>I am From : {{characterDetail.origin.name}}</p>
-        <p>Specie : {{characterDetail.species}}</p>
-        <p>I am : {{characterDetail.status}}</p>
+        <p>I am From : <span>{{characterDetail.origin.name | uppercase}}</span></p>
+        <p>Specie : <span>{{characterDetail.species | uppercase}}</span></p>
+        <p>I am : <span>{{characterDetail.status | uppercase}}</span></p>
+        <p>Gender : <span>{{characterDetail.gender | uppercase}}</span></p>
     </div>
 </div>
+

@@ -12,7 +12,7 @@ export class EpisodesService {
   getEpisodes():Observable<any>{
     return this.http.get('https://rickandmortyapi.com/api/episode')
   }
-  /* getLocationById(id:any):Observable<any> {
-    return this.http.get('https://rickandmortyapi.com/api/location/' + id)
-  } */
+  getEpisodeById(id:any):Observable<any> {
+    return this.http.get('https://rickandmortyapi.com/api/episode/' + id)
+  }
 }

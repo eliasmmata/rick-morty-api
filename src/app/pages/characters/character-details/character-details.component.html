@@ -1,6 +1,6 @@
-<div class="c-character-detail">
-    <h2>Selected Episode</h2>
-    <div>
+<div class="c-character-detail row justify-content-center">
+    <h2>Selected Character</h2>
+    <div class="col-10 col-md-8 col-lg-5">
         <button [routerLink]="['/characters']" [ngStyle]="{'text-align': 'right'}">Go Back</button>
         <h3>{{characterDetail.name | uppercase }}</h3>
         <img src="{{characterDetail.image}}" alt="{{characterDetail.name}}">

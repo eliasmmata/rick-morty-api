@@ -1,6 +1,6 @@
-<div class="c-episode-detail">
+<div class="c-episode-detail row justify-content-center">
     <h2>Selected Episode</h2>
-    <div>
+    <div class="col-10 col-md-8 col-lg-5">
         <button [routerLink]="['/episodes']" [ngStyle]="{'text-align': 'right'}">Go Back</button>
         <h3>{{episodeDetail.name | uppercase }}</h3>
         <p>Released : <span>{{episodeDetail.air_date}}</span></p>

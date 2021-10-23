@@ -1,6 +1,6 @@
-<div class="c-location-detail">
+<div class="c-location-detail row justify-content-center">
     <h2>Selected Location</h2>
-    <div>
+    <div class="col-10 col-md-8 col-lg-5">
         <button [routerLink]="['/locations']" [ngStyle]="{'text-align': 'right'}">Go Back</button>
         <h3>{{locationDetail.name | uppercase }}</h3>
         <p>Type : <span>{{locationDetail.type}}</span></p>

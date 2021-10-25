@@ -3,7 +3,7 @@
     <div class="c-characters-gallery-card col-md-4 col-lg-3" *ngFor='let character of charactersList' [routerLink]="['/characters', character.id]">
         <h3>{{character.name | uppercase }}</h3>
         <img src="{{character.image}}">
-        <h5>¿Curious?</h5>
+        <h5><span [ngStyle]="{color: '#191919'}" *ngIf="character.name.includes('Rick Sanchez')"> Buurp</span> ¿Curious?</h5>
         <button>More Data</button>
     </div>
 </div>

@@ -30,6 +30,7 @@ export class EpisodesComponent implements OnInit {
         console.log(episode.info)
       })
     }
+    window.scrollTo(0, 0);
   }
   public previousPage() {
     console.log('pagina anterior')
@@ -40,6 +41,7 @@ export class EpisodesComponent implements OnInit {
         console.log(episode.info)
       })
     }
+    window.scrollTo(0, 0);
   }
 
 }

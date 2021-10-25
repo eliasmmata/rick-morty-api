@@ -29,6 +29,7 @@ export class CharactersComponent implements OnInit {
         // console.log(location.info)
       })
     }
+    window.scrollTo(0, 0);
   }
   public previousPage() {
     console.log('pagina anterior')
@@ -39,6 +40,7 @@ export class CharactersComponent implements OnInit {
         // console.log(location.info)
       })
     }
+    window.scrollTo(0, 0);
   }
 
 }

@@ -1,12 +1,12 @@
 <div class="c-location-detail row justify-content-center">
     <h2>Selected Location</h2>
-    <div class="col-10 col-md-8 col-lg-5">
+    <div class="col-10 col-md-8 col-lg-5" *ngIf="showContent">
         <button [routerLink]="['/locations']" [ngStyle]="{'text-align': 'right'}">Go Back</button>
         <h3>{{locationDetail.name | uppercase }}</h3>
         <p>Type : <span>{{locationDetail.type}}</span></p>
         <p>Dimension : <span>{{locationDetail.dimension}}</span></p>
         <h4>Usually around</h4>
-        <div class="c-location-residents-scroll" >
+        <div class="c-location-residents-scroll" *ngIf="showContent">
             <div *ngFor="let res of residentsLocation">
                 <h5>{{res.name}}</h5>
                 <img src="{{res.image}}">

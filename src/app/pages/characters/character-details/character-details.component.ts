@@ -8,12 +8,16 @@ import { CharactersService } from 'src/app/shared/services/characters.service';
   styleUrls: ['./character-details.component.scss']
 })
 export class CharacterDetailsComponent implements OnInit {
+  
+  public showContent: boolean = false;
 
   public characterDetail: any = {};
 
   constructor(private route:ActivatedRoute, private charactersService:CharactersService) { }
 
   ngOnInit(): void {
+    setTimeout(()=>this.showContent=true, 1000);
+
     this.route.paramMap.subscribe(params => {
       let idCharacter = Number(params.get('id'))
       this.charactersService.getCharacterById(idCharacter).subscribe((character) => {

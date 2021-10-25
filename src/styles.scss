@@ -42,6 +42,10 @@ button {
     }
     .c-characters-gallery, .c-locations-gallery, .c-episodes-gallery {
         background-attachment: fixed !important;
+        min-height: 60vh !important;
+    }
+    .c-character-detail, .c-location-detail, .c-episode-detail {
+        min-height: 60vh !important;
     }
 }
 
@@ -102,5 +106,9 @@ button {
     }
     .c-about-container {
         padding: 0 25%;
+    }
+    .bee-spinner {
+        margin-top: 5% !important;
+        background-size: 50% !important;
     }
 }

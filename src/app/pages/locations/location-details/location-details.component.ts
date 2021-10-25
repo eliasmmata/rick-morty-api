@@ -9,12 +9,17 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class LocationDetailsComponent implements OnInit {
 
+  public showContent: boolean = false;
+
   public locationDetail:any = {}
+
   residentsLocation:any= []
 
   constructor(private route:ActivatedRoute, private locationsService:LocationsService) { }
 
   ngOnInit(): void {
+    setTimeout(()=>this.showContent=true, 1000);
+
     this.route.paramMap.subscribe(params => {
         let idLocation = Number(params.get('id'))
         this.locationsService.getLocationById(idLocation).subscribe((location) => {

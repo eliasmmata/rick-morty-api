@@ -26,7 +26,11 @@ export class CharactersComponent implements OnInit {
         this.charactersService.getLocationByPages(this.info.next).subscribe((character) => {
         this.charactersList= character.results
         this.info = character.info
-        // console.log(location.info)
+        // console.log(character.info)
+        if(character.info.next === null) {
+          character.info.next = 'https://rickandmortyapi.com/api/character?page=1'
+          console.log('vuelvo a la primera pagina')
+        }
       })
     }
     window.scrollTo(0, 0);
@@ -37,7 +41,7 @@ export class CharactersComponent implements OnInit {
         this.charactersService.getLocationByPages(this.info.prev).subscribe((character) => {
         this.charactersList= character.results
         this.info = character.info
-        // console.log(location.info)
+        // console.log(character.info)
       })
     }
     window.scrollTo(0, 0);

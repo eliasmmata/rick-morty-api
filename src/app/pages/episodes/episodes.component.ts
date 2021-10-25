@@ -27,7 +27,11 @@ export class EpisodesComponent implements OnInit {
         this.episodesService.getLocationByPages(this.info.next).subscribe((episode) => {
         this.episodesList= episode.results
         this.info = episode.info
-        console.log(episode.info)
+        // console.log(episode.info.next)
+        if(episode.info.next === null) {
+          episode.info.next = 'https://rickandmortyapi.com/api/episode?page=1'
+          console.log('vuelvo a la primera pagina')
+        }
       })
     }
     window.scrollTo(0, 0);

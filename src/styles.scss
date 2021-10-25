@@ -79,6 +79,9 @@ button {
             height: 40vh !important;
         }
     }
+    .c-characters-gallery, .c-episodes-gallery, .c-locations-gallery {
+        min-height: 60vh;
+    }
     .c-characters-gallery h2, .c-locations-gallery h2, .c-episodes-gallery h2, 
     .c-character-detail h2, .c-location-detail h2, .c-episode-detail h2  {
         font-size: 2.5rem;

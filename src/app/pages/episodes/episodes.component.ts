@@ -40,9 +40,9 @@ export class EpisodesComponent implements OnInit {
     console.log('pagina anterior')
     if(this.info.prev) {
         this.episodesService.getLocationByPages(this.info.prev).subscribe((episode) => {
-        this.episodesService= episode.results
+        this.episodesList= episode.results
         this.info = episode.info
-        console.log(episode.info)
+        // console.log(episode.info)
       })
     }
     window.scrollTo({ top: 0, behavior: 'smooth' })

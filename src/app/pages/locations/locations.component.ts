@@ -34,7 +34,7 @@ export class LocationsComponent implements OnInit {
         }
       })
     }
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
   public previousPage() {
     console.log('pagina anterior')
@@ -45,7 +45,6 @@ export class LocationsComponent implements OnInit {
         // console.log(location.info)
       })
     }
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
-
 }

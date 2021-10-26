@@ -21,6 +21,17 @@ export class CharactersComponent implements OnInit {
     })
   }
   public nextPage() {
+    // TRATAR DE QUE EN EL TITULO PONGA PAGINA EN LA QUE ESTÁ
+    /* const pages = this.info.pages
+    console.log(pages)
+   for (let i = 0; i < pages; i++) {
+      const $$title = window.document.querySelector('.gallery-title')!
+      const $$spanTitle = document.createElement('span')
+      $$spanTitle.innerHTML = pages
+      $$title.appendChild($$spanTitle);
+      console.log(pages)
+    } */
+
     console.log('pagina siguiente')
     if(this.info.next) {
         this.charactersService.getLocationByPages(this.info.next).subscribe((character) => {

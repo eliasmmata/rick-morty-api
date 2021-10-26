@@ -9,18 +9,24 @@
     }
     & h3 {
         color: #7cb950;
-        padding: 0 3rem;
+        padding: 0 1rem;
         text-align: left;
         line-height: 1.75rem;
     }
     & h4 {
-        text-align: left;
+        text-align: center;
         padding: 0rem 3rem 1rem 3rem;
         margin: 1.5rem 0;
         color: #8fc966;
         & span {
             display: block;
-            margin-top: 2rem;
+            margin-top: 1rem;
+            & a {
+                color: white;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
     & h5 {

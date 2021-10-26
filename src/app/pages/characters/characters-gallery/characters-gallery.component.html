@@ -4,6 +4,6 @@
         <h3>{{character.name | uppercase }}</h3>
         <img src="{{character.image}}">
         <h5><span [ngStyle]="{color: '#191919'}" *ngIf="character.name.includes('Rick Sanchez')"> Buurp</span> ¿Curious?</h5>
-        <button>More Data</button>
+        <button class="btn-card" data-back="In your finger" data-front="More Data"></button>
     </div>
 </div>

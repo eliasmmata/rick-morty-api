@@ -13,6 +13,8 @@ body {
     margin: 0;
     font-family: 'future', sans-serif;
     box-sizing: border-box;
+    min-height: 100vh !important;
+    background: black;
 }
 ul {
     padding: 0;
@@ -31,6 +33,18 @@ img {
 }
 button {
     cursor: pointer;
+}
+.button-pag {
+    transition: .25s !important;
+    &:hover {
+        background-color: #FB9039 !important;
+        transition: .25s !important;
+        box-shadow: 1px 1px 0px #F0A161,
+        1px 1px 0px #F0A161,
+        1px 1px 0px #F0A161,
+        2px 2px 0px #F0A161,
+        2px 2px 0px #F0A161,
+    }
 }
 
 @include phone {
@@ -62,12 +76,15 @@ button {
         background-position-y: center !important;
         padding: 0 12.5%;
     }
+    .c-about-container h3 {
+        margin-top: 1.5rem !important;
+    }
 }
 @include desktop {
     .hero-image {
         & img {
             width: 20% !important;
-            max-height: 13vh;
+            max-height: 13vh !important;
         }
     }
     nav {
@@ -102,10 +119,23 @@ button {
         min-height: 60vh !important;
     }
     .c-episodes-gallery-card {
-        max-height: 25vh;
+        max-height: 25vh !important;
     }
     .c-about-container {
-        padding: 0 25%;
+        padding: 0 25% !important;
+        min-height: 65vh !important;
+    }
+    
+    .c-about-container h3 {
+        margin-top: 3.5rem !important;
+    }
+
+    footer {
+        padding-right: 6rem !important;
+        & a {
+            margin-right: 5rem !important;
+            margin-left: 3rem !important;
+        }
     }
     .bee-spinner {
         margin-top: 5% !important;

@@ -1,5 +1,7 @@
 <div class="c-locations-gallery row d-flex justify-content-center">
-    <h2 class="gallery-title">Locations List</h2>
+    <h2 class="gallery-title">Locations List
+        <span *ngIf="this.info.next != null || this.info.next >= 1">{{getPageNumber()}}</span>
+    </h2>
     <div class="c-locations-gallery-card col-md-4 col-lg-3" *ngFor='let location of locationsList' [routerLink]="['/locations', location.id]" [ngStyle]="{'border': '1px solid #000','margin':'1rem 2rem','padding':'1em'}">
         <h3>{{location.name | uppercase }}</h3>
         <h5>I am a <span>{{location.type}}</span></h5>

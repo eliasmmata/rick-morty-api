@@ -72,6 +72,9 @@ button {
     .c-characters-gallery-card, .c-locations-gallery-card, .c-episodes-gallery-card {
         margin: 1rem 1rem !important;
     }
+    .c-episodes-gallery-card h3 {
+        min-height: 8vw;
+  }
     .c-about-container {
         background-position-y: center !important;
         padding: 0 12.5%;
@@ -103,7 +106,7 @@ button {
     .c-characters-gallery, .c-episodes-gallery, .c-locations-gallery {
         min-height: 60vh;
     }
-    .c-characters-gallery h2, .c-locations-gallery h2, .c-episodes-gallery h2, 
+    .c-characters-gallery h2, .c-locations-gallery h2, .c-episodes-gallery h2,
     .c-character-detail h2, .c-location-detail h2, .c-episode-detail h2  {
         font-size: 2.5rem;
     }
@@ -115,17 +118,27 @@ button {
             padding-left: 20% !important ;
         }
     }
+    .c-episodes-gallery-card {
+        & h3 {
+            min-height: 6vh !important;
+        }
+        & h5 {
+            min-height: 6vh !important;
+            font-size: 1.1rem;
+        }
+        & h5:first-of-type {
+            margin-top: 2rem !important;
+        }
+    }
+
     .c-episode-detail {
         min-height: 60vh !important;
-    }
-    .c-episodes-gallery-card {
-        max-height: 25vh !important;
     }
     .c-about-container {
         padding: 0 25% !important;
         min-height: 65vh !important;
     }
-    
+
     .c-about-container h3 {
         margin-top: 3.5rem !important;
     }

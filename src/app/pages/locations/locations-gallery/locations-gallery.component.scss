@@ -88,4 +88,10 @@
 .c-locations-gallery-card {
   margin: 1rem 3rem;
   padding: 1em;
+  & h3 {
+    min-height: 3rem;
+  }
+  & h5 {
+    min-height: 3rem;
+  }
 }

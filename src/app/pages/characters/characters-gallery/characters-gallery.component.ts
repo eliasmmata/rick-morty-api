@@ -11,9 +11,18 @@ export class CharactersGalleryComponent implements OnInit {
   @Input() charactersList:any= [];
   @Input() info:any = {};
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() { 
+    
   }
 
+  ngOnInit(): void {
+  
+  }
+  public getPageNumber() {
+    var url_string = this.info.next;
+    var url = new URL(url_string);
+    var pageNumber = Number(url.searchParams.get("page"))
+    pageNumber = pageNumber -1;
+    return pageNumber
+  }
 }

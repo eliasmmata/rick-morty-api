@@ -24,10 +24,9 @@ export class CharactersService {
     );
   }
   getLocationByPages(url:any):Observable<any> {
-    
     return this.http.get(url)
   }
-
+  
 }
 
 

@@ -12,7 +12,7 @@ export class CharactersComponent implements OnInit {
   charactersList:any = [];
   info:any = {}
 
-  constructor(private charactersService:CharactersService) { }
+  constructor(private charactersService:CharactersService) {}
 
   ngOnInit(): void {
     this.charactersService.getCharacters().subscribe((character) =>{
@@ -20,18 +20,9 @@ export class CharactersComponent implements OnInit {
       this.info = character.info;
     })
   }
-  public nextPage() {
-    // TRATAR DE QUE EN EL TITULO PONGA PAGINA EN LA QUE ESTÁ
-    /* const pages = this.info.pages
-    console.log(pages)
-   for (let i = 0; i < pages; i++) {
-      const $$title = window.document.querySelector('.gallery-title')!
-      const $$spanTitle = document.createElement('span')
-      $$spanTitle.innerHTML = pages
-      $$title.appendChild($$spanTitle);
-      console.log(pages)
-    } */
 
+  public nextPage() {
+    /* this.pageList() */
     console.log('pagina siguiente')
     if(this.info.next) {
         this.charactersService.getLocationByPages(this.info.next).subscribe((character) => {
@@ -46,7 +37,8 @@ export class CharactersComponent implements OnInit {
     }
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
-  public previousPage() {
+
+  public previousPage() {   
     console.log('pagina anterior')
     if(this.info.prev) {
         this.charactersService.getLocationByPages(this.info.prev).subscribe((character) => {
@@ -59,3 +51,4 @@ export class CharactersComponent implements OnInit {
   }
 
 }
+

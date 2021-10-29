@@ -14,5 +14,12 @@ export class LocationsGalleryComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  public getPageNumber() {
+    var url_string = this.info.next; //window.location.href
+    var url = new URL(url_string);
+    var pageNumber = Number(url.searchParams.get("page"))
+    pageNumber = pageNumber -1;
+    return pageNumber
+  }
 
 }

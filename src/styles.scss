@@ -119,6 +119,9 @@ button {
             padding-left: 20% !important ;
         }
     }
+    .c-locations-gallery-card h5 {
+        font-size: 1.1rem !important;
+    }
     .c-episodes-gallery-card {
         & h3 {
             min-height: 6vh !important;
@@ -131,7 +134,6 @@ button {
             margin-top: 2rem !important;
         }
     }
-
     .c-episode-detail {
         min-height: 60vh !important;
     }

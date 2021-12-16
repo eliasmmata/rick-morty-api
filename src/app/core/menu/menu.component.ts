@@ -18,7 +18,7 @@ export class MenuComponent implements OnInit {
       // filter `NavigationEnd` events
       if (event instanceof NavigationEnd) {
         // get current route without leading slash `/`
-        const eventUrl = /(?:\/).+/.exec(event.urlAfterRedirects);
+        const eventUrl = /(?=\/).+/.exec(event.urlAfterRedirects);
         const currentRoute = (eventUrl || []).join('');
         // set bgClass property with the value of the current route
         this.navbarBg = currentRoute;
